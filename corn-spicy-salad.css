@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.recipe-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* ส่วนของรูปภาพ */
+.image-section {
+    position: relative;
+}
+
+.recipe-image {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+/* แถบข้อมูลเมนู */
+.recipe-info-bar {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%; /* ปรับความกว้างให้เหมาะสม */
+    background-color: #d9534f;
+    color: white;
+    padding: 10px 15px; /* เพิ่ม padding เพื่อให้ดูดีขึ้น */
+    text-align: center;
+    box-sizing: border-box;
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /
+}
+
+.recipe-info-bar::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 1px solid black;
+    z-index: -1;
+  
+}
+
+.recipe-info-bar h1 {
+    font-size: 26px;
+    margin: 0;
+    font-weight: bold; /* เพิ่มความหนาให้กับหัวข้อ */
+}
+
+.recipe-info-bar p {
+    font-size: 14px;
+    margin: 5px 0 0 0;
+}
+
+/* ส่วนของ Products */
+.recipe-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px; /* เพิ่มระยะห่างจากแถบข้อมูลเมนู */
+}
+
+.products {
+    width: 45%; /* ลดความกว้างเพื่อให้เหมาะสมกับขนาด */
+    border-right: 2px solid #ccc; /* เส้นแบ่งระหว่าง Products และ Ingredients/Directions */
+    padding-right: 20px;
+}
+
+.recipe-info {
+    width: 45%;
+    padding-left: 0; /* เอา padding ออก เพื่อให้ชิดด้านซ้าย */
+    margin-right: 20px; /* เพิ่มระยะห่างจาก content ด้านขวา */
+}
+
+/* เอาจุดออกจากรายการ Products */
+.products ul {
+    list-style-type: none;
+}
+
+.products ul li {
+    margin-bottom: 15px; /* เพิ่มระยะห่างระหว่างรายการ */
+    font-size: 18px; /* เพิ่มขนาดตัวอักษร */
+    line-height: 1.6; /* เพิ่มความสูงระหว่างบรรทัด */
+}
+
+/* ส่วน Ingredients และ Directions */
+.ingredients h2, .directions h2 {
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px; /* เพิ่มระยะห่างระหว่างหัวข้อกับเนื้อหา */
+    color: black; /* ใช้สีแดงเพื่อความโดดเด่น */
+    
+}
+
+.ingredients ul, .directions ul {
+    margin: 15px 0;
+    font-size: 16px;
+    line-height: 1.6; /* เพิ่มความสูงระหว่างบรรทัดเพื่อให้อ่านง่าย */
+}
+
+.ingredients ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.ingredients ul li {
+    margin-bottom: 15px; /* เพิ่มระยะห่างระหว่างรายการ */
+}
+
+/* รูปภาพสำหรับ Products */
+.product-image {
+    width: 180px; /* ลดขนาดรูปภาพเพื่อให้พอดีกับ layout */
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* ปรับรูปแบบ Bullet Points ของ Directions */
+.directions ul {
+    list-style-type: disc; /* เปลี่ยน Bullet Points เป็นวงกลม */
+    padding-left: 40px; /* ขยับ Bullet Points ไปทางขวาเล็กน้อย */
+}
+.products h2 {
+    font-size: 24px; /* ปรับขนาดตัวอักษรได้ตามต้องการ */
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+    text-transform: uppercase; /* ทำให้ข้อความเป็นตัวพิมพ์ใหญ่ */
+    margin-bottom: 20px;
+    color: #000; /* สีของตัวอักษร */
+}
+
